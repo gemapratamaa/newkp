@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form action="import_metadata" method="post" enctype="multipart/form-data">
+        {% csrf_token %} Select csv to upload:
+        <input type="file" name="metadata" id="metadata">
+        <input type="submit" value="Upload CSV" name="submit">
+    </form>
+
+</body>
+
+</html>

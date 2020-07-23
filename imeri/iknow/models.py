@@ -2,7 +2,7 @@ from django.db import models
 # from django_mysql.models import ListCharField
 
 class Publication(models.Model):
-	title = models.CharField(max_length=300)
+	
 	
 	"""
 	authors = ListCharField(
@@ -11,6 +11,7 @@ class Publication(models.Model):
 		max_length=(6 * 11)  # 6 * 10 character nominals, plus commas
 	)
 	"""
+	title = models.CharField(max_length=500, unique=True)
 	authors = models.CharField(max_length=500)
 	abstract = models.CharField(max_length=50000)
 	publisher = models.CharField(max_length=500)
@@ -23,3 +24,9 @@ class Publication(models.Model):
 	issn = models.CharField(max_length=500)
 	keywords = models.CharField(max_length=500)
 	type_of = models.CharField(max_length=500)
+
+	def __str__(self):
+		return self.title
+
+	#class Meta:
+	#	delimiter = ','
