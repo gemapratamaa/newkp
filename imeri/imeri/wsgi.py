@@ -1,5 +1,5 @@
 """
-WSGI config for iKnow project.
+WSGI config for imeri project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'iKnow.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'imeri.settings')
 
 application = get_wsgi_application()
